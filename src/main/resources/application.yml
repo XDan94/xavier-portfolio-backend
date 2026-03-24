@@ -7,24 +7,9 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-  mail:
-    host: smtp.ionos.fr
-    port: 587
-    username: ${MAIL_USERNAME}
-    password: ${MAIL_PASSWORD}
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
-
-contact:
-  mail:
-    to: ${MAIL_TO}
+  sql:
+    init:
+      platform: postgresql
 
 server:
   port: 8080
-
-frontend:
-  url: ${FRONTEND_URL:http://localhost:4200}
